@@ -7,6 +7,6 @@
 - [x] Tipo da task deve ter: titulo, conteudo, favorita, cor.
 - [x] Rota de Criar task
 - [x] Rota de Buscar task
-- [] Rota de Atualizar task
+- [x] Rota de Atualizar task
 - [] Rota de Deletar task
 - [] Testar e finalizar codigo
