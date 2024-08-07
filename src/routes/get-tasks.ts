@@ -28,7 +28,9 @@ export async function getTasks(app: FastifyInstance) {
       },
     },
     async (_request, reply) => {
-      const tasks = await prisma.task.findMany();
+      const tasks = await prisma.task.findMany({
+        orderBy: { createdAt: 'desc' },
+      });
       return reply.status(200).send({ tasks });
     },
   );
