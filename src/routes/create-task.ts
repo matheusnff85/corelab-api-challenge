@@ -6,11 +6,11 @@ import { prisma } from '../lib/prisma';
 
 export async function createTask(app: FastifyInstance) {
   app.withTypeProvider<ZodTypeProvider>().post(
-    '/task',
+    '/tasks',
     {
       schema: {
-        summary: 'Create an task',
-        tags: ['tasks'],
+        summary: 'Cria uma nova task',
+        tags: ['Tasks'],
         body: z.object({
           title: z.string().min(3),
           content: z.string().min(3),

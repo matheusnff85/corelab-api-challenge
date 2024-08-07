@@ -9,6 +9,7 @@ import {
 } from 'fastify-type-provider-zod';
 
 import { createTask } from './routes/create-task';
+import { getTasks } from './routes/get-tasks';
 
 const app = fastify();
 
@@ -32,6 +33,7 @@ app.register(fastifySwagger, {
 app.register(fastifySwaggerUI, { routePrefix: '/docs' });
 
 app.register(createTask);
+app.register(getTasks);
 
 app.listen({ port: 3333 }).then(() => {
   console.log('Server running on port 3333 🚀');
