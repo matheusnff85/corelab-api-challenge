@@ -8,5 +8,5 @@
 - [x] Rota de Criar task
 - [x] Rota de Buscar task
 - [x] Rota de Atualizar task
-- [] Rota de Deletar task
+- [x] Rota de Deletar task
 - [] Testar e finalizar codigo

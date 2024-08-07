@@ -11,6 +11,7 @@ import {
 import { createTask } from './routes/create-task';
 import { getTasks } from './routes/get-tasks';
 import { updateTask } from './routes/update-task';
+import { deleteTask } from './routes/delete-task';
 
 import { errorHandler } from './middlewares/error-handler';
 
@@ -38,6 +39,7 @@ app.register(fastifySwaggerUI, { routePrefix: '/docs' });
 app.register(createTask);
 app.register(getTasks);
 app.register(updateTask);
+app.register(deleteTask);
 
 app.setErrorHandler(errorHandler);
 
