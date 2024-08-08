@@ -4,6 +4,14 @@ import { z } from 'zod';
 
 import { prisma } from '../lib/prisma';
 
+const taskSchema = z.object({
+  id: z.string().uuid(),
+  title: z.string(),
+  content: z.string(),
+  isFavorite: z.boolean(),
+  color: z.string(),
+});
+
 export async function getTasks(app: FastifyInstance) {
   app.withTypeProvider<ZodTypeProvider>().get(
     '/tasks',
@@ -12,18 +20,7 @@ export async function getTasks(app: FastifyInstance) {
         summary: 'Busca todas as tasks',
         tags: ['Tasks'],
         response: {
-          200: z.object({
-            tasks: z.array(
-              z.object({
-                id: z.string().uuid(),
-                title: z.string(),
-                content: z.string(),
-                isFavorite: z.boolean(),
-                color: z.string(),
-                createdAt: z.date(),
-              }),
-            ),
-          }),
+          200: z.array(taskSchema),
         },
       },
     },
@@ -31,7 +28,7 @@ export async function getTasks(app: FastifyInstance) {
       const tasks = await prisma.task.findMany({
         orderBy: { createdAt: 'desc' },
       });
-      return reply.status(200).send({ tasks });
+      return reply.status(200).send(tasks);
     },
   );
 }
