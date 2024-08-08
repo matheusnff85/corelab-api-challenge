@@ -21,6 +21,8 @@ Abaixo segue algumas decisões que tomei e funcionalidades da API.
 
 - Organizei as rotas em arquivos e suas validações em seus respectivos arquivos, a fim de facilitar a visualização e manutenção.
 
+- Desenvolvi testes unitários para garantir o funcionamento correto da aplicação.
+
 ## Rodando localmente
 
 **Clone o projeto**
@@ -107,6 +109,15 @@ Ou caso queira visualizar os logs do container.
 | Parâmetro | Tipo     | Descrição                                                         |
 | :-------- | :------- | :---------------------------------------------------------------- |
 | `Nenhum`  | `Nenhum` | Todas as informações da tarefa são enviadas no body da requisição |
+
+```json
+{
+  "title": "Ser Aprovado na Corelab",
+  "content": "Finalizar o projeto e enviar.",
+  "isFavorite": true,
+  "color": "#8E3EF7"
+}
+```
 
 #### Retorno
 
