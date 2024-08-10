@@ -2,6 +2,10 @@
 
 Abaixo segue algumas decisões que tomei e funcionalidades da API.
 
+-Link abaixo para o vídeo demonstrando e explicando sobre o app
+
+- https://www.youtube.com/watch?v=cSbDV5AMkCE
+
 ## Stacks utilizadas
 
 - **Node.js:** Ambiente de execução JavaScript no lado do servidor.
