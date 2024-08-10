@@ -21,7 +21,7 @@ Abaixo segue algumas decisões que tomei e funcionalidades da API.
 
 - Organizei as rotas em arquivos e suas validações em seus respectivos arquivos, a fim de facilitar a visualização e manutenção.
 
-- Desenvolvi testes unitários para garantir o funcionamento correto da aplicação.
+- Desenvolvi testes E2E para garantir o funcionamento correto da aplicação.
 
 ## Rodando localmente
 
