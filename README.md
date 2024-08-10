@@ -2,7 +2,11 @@
 
 Abaixo segue algumas decisões que tomei e funcionalidades da API.
 
--Link abaixo para o vídeo demonstrando e explicando sobre o app
+Link do repositório de back end
+
+- https://github.com/matheusnff85/corelab-api-challenge/
+
+Link abaixo para o vídeo demonstrando e explicando sobre o app
 
 - https://www.youtube.com/watch?v=cSbDV5AMkCE
 
